@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail Page</title>
+    <link rel="stylesheet" href="../details.css">
+</head>
+<body>
+
+    <div class="det-page-container">
+        <div class="detail-container">
+            <div class="det-article-type">{{.Type}} Article</div>
+            <div class="det-title">{{.Title}}</div>
+            <div class="volume-issn-container">
+                <div class="det-year"> {{.Year}}</div>
+                <div class="det-volume"> {{.Volume}}</div>
+                <div class="det-issue"> {{.Issue}}</div>
+                <div class="det-page"> {{.Pages}}</div>
+                <div class="det-date"> {{.Date}}</div>
+                <div class="det-eissn"> {{.EISSN}}</div>
+            </div>
+            <div class="author-container">
+                {{ range .Authors -}}
+                    <div class="det-author">{{.}}</div>
+                {{ end }}
+            </div>
+
+            <div class="doi-pdf-container">
+                <div class="det-doi"><a href="https://www.doi.org/{{.DOI}}">{{.DOI}}</a></div>
+                <a class="det-pdf" href="../{{.PDFURL}}">Download PDF</a>
+            </div>
+            <div class="det-abstract"> {{.Abstract}}</div>
+            <div class="det-keywords det-datex-header"> {{.Keywords}}</div>
+            <div class="det-correspondence"> {{.Correspondence}} <a class="def-correspondence-email" href="{{.CorrespondenceEmail}}"> {{.CorrespondenceEmail}}</a></div>
+            <div class="det-received-date det-datex-header"> {{.ReceiveDate}}</div>
+            <div class="det-accepted-date det-datex-header"> {{.AcceptDate}}</div>
+            <div class="det-published-date det-datex-header"> {{.PublishDate}}</div>
+            <div class="det-cite det-datex-header"> {{.Cite}}</div>
+        </div>
+    </div>
+</body>
+</html>

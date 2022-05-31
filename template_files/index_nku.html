@@ -1,0 +1,69 @@
+{{define "article"}}
+<div class="article-container part-{{lower .Part}}">
+    <div class="article-type">{{.Type}} Article</div>
+    <a class="article-title" href="https://jbst-nku.github.io/{{.Issues.Prefix}}{{.DetailsURL}}">{{.Title}}</a>
+    <div class="article-authors">
+        {{range .Authors}}
+        <div class="article-author">{{.}}</div>
+        {{end}}
+    </div>
+    <div class="article-pages-download">
+        <div class="article-pages">{{.Pages}}</div>
+        <a class="article-download" href="https://jbst-nku.github.io/{{.Issues.Prefix}}{{.PDFURL}}"></a>
+    </div>
+</div>
+{{end}}
+
+<div id="scoped-content">
+    <style scoped="" type="text/css">
+        {{.CSS}}
+    </style>
+    <h1 style="margin-top:100px; font-weight:bold; color:red">
+        This is a test page!!! Information on this page may not be accurate.</h1>
+<div class="main-header">JBST Archive</div>
+
+<div class="part-container">
+    <div class="issue-header" id="articles">{{.CurrentIssue.CurrentPast}}: {{.CurrentIssue.Name}}</div>
+</div>
+
+<div class="part-container">
+    <div class="part-info part-a">Part A: Natural Sciences</div>
+</div>
+
+{{range .Articles}}
+    {{if eq .Part "A"}}
+            {{template "article" . }}
+    {{end}}
+{{end}}
+
+<div class="part-container">
+    <div class="part-info part-b">Part B: Engineering Sciences</div>
+</div>
+
+{{range .Articles}}
+    {{if eq .Part "B"}}
+        {{template "article" .}}
+    {{end}}
+{{end}}
+
+<div class="part-container">
+    <div class="part-info part-c">Part C: Agricultural and Food Sciences</div>
+</div>
+
+{{range .Articles}}
+    {{if eq .Part "C"}}
+        {{template "article" .}}
+    {{end}}
+{{end}}
+
+<div class="part-container">
+    <div class="part-info part-d">Part D: Architectural Sciences</div>
+</div>
+
+{{range .Articles}}
+    {{if eq .Part "D"}}
+        {{template "article" .}}
+    {{end}}
+{{end}}
+
+</div>
