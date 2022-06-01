@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,300;0,400;1,400&display=swap');
+
+.det-page-container{
+    display: flex;
+    justify-content: center ;
+}
+
+.detail-container{
+    display:grid;
+    row-gap: 2ex;
+    min-width: 90vmin;
+    max-width: 80ch;
+    font-size:2vw;
+}
+
+.author-container{
+    display:flex;
+    flex-direction: row;
+}
+
+.det-author{
+    padding-right: 1em;
+    font-size:1.5vw;
+}
+
+.det-author::before{
+    content: "✍️ ";
+    font-size:1.5vw;
+}
+
+.det-article-type{
+    font-size: large;
+    color:gray;
+    padding-top:2ex;
+    font-size:2vw;
+    text-decoration: underline;
+}
+
+.det-title{
+    font-size: larger;
+    color: cornflowerblue;
+    font-size:3vw;
+}
+
+.det-abstract::before{
+    content:"Abstract:\a";
+    white-space: pre;
+    font-size:2.5vw;
+    font-weight: normal;
+    text-decoration: underline;
+    font-family: sans-serif;
+}
+
+.det-abstract::first-line{
+    color:darkred;
+    line-height: 2em;
+    font-size:2vw;
+    font-family: sans-serif;
+}
+
+.det-abstract{
+    font-family: 'Mukta', sans-serif;
+    line-height: 150%;
+    background: #fafafa;
+    font-size:1.5vw;
+}
+
+.det-correspondence::before{
+    content:"Correspondence:";
+    color:darkred;
+    font-size:1.5vw;
+    text-decoration: underline;
+}
+
+.det-datex-header::before{
+    color:darkslateblue;
+    font-size:1.5vw;
+    text-decoration: underline;
+}
+
+.det-received-date::before{
+    content:"Received Date:";
+}
+
+.det-accepted-date::before{
+    content:"Accepted Date:";
+}
+
+.det-published-date::before{
+    content:"Published Date:";
+}
+
+.det-cite{
+    font-family: monospace;
+    background: lightgrey;
+    border-radius: 0.4ex;
+}
+
+.det-cite::before{
+    font-family: sans-serif;
+    content:"Cite:";
+    color:darkred;
+}
+
+.det-keywords::before{
+    content:"Keywords:";
+    color:darkred;
+}
+
+.det-keywords{
+    color:darkolivegreen;
+}
+
+.det-doi a{
+    color:slategray;
+}
+
+.det-doi{
+    font-size:1.5vw;
+}
+
+.doi-pdf-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.det-pdf{
+    justify-self: end;
+    color:slategray;
+    font-size:1.5vw;
+}
+
+.det-published-date, .det-accepted-date, .det-received-date, .det-correspondence, .det-cite, .det-keywords{
+    font-size:1.5vw;
+    font-family: sans-serif;
+}
+
+.det-volume{
+    color:darkslateblue;
+}
+
+.volume-issn-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.det-volume::before{
+    content:"Volume:";
+}
+
+.det-year::before{
+    content:"Year:";
+}
+
+.det-issue::before{
+    content:"Issue:";
+}
+
+.det-page::before{
+    content:"Page:";
+}
+
+.det-date::before{
+    content:"Date:";
+}
+
+.det-eissn::before{
+    content:"EISSN:";
+}
+
+.det-eissn{
+    margin-left: auto;
+}
+
+.volume-issn-container *{
+    color: darkgray;
+    column-gap:1ex;
+    font-size:1.5vw;
+}
+
+.volume-issn-container{
+    column-gap:1ex;
+}
+
+
+
+@media (max-width: 1000px) {
+
+
+
+    .detail-container{
+        min-width: 90%;
+        max-width: 90%;
+        font-size:4vw;
+    }
+
+    .det-author{
+        font-size:3vw;
+    }
+
+    .det-author::before{
+        content: "✍️ ";
+        font-size:3vw;
+    }
+
+    .det-article-type{
+        font-size:4vw;
+    }
+
+    .det-title{
+        font-size:6vw;
+    }
+
+    .det-abstract::before{
+        font-size:5vw;
+    }
+
+    .det-abstract::first-line{
+        font-size:4vw;
+    }
+
+    .det-abstract{
+        font-size:3vw;
+    }
+
+    .det-correspondence::before{
+        font-size:3vw;
+    }
+
+    .det-datex-header::before{
+        font-size:3vw;
+    }
+
+    .det-doi{
+        font-size:3vw;
+    }
+
+    .det-pdf{
+        justify-self: end;
+        color:slategray;
+        font-size:3vw;
+    }
+
+    .det-published-date, .det-accepted-date, .det-received-date, .det-correspondence, .det-cite, .det-keywords{
+        font-size:3vw;
+        font-family: sans-serif;
+    }
+
+    .volume-issn-container *{
+        font-size:3vw;
+    }
+}
+
+

@@ -71,6 +71,7 @@ func ParseCSV(path string) []Article{
 		cite = whiteSpace.ReplaceAllString(cite, "")
 		abstract = whiteSpace.ReplaceAllString(abstract, "")
 		keywords = whiteSpace.ReplaceAllString(keywords, "")
+		keywords = strings.ReplaceAll(keywords, ",", ", ")
 
 		authors := make([]string,0)
 		for i := 9; i < 14; i++{
